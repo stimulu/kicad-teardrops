@@ -19,7 +19,10 @@ class teardrop_gui ( wx.Dialog ):
 	def __init__( self, parent ):
 		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Teardrops", pos = wx.DefaultPosition, size = wx.DefaultSize, style = wx.CAPTION|wx.CLOSE_BOX|wx.DEFAULT_DIALOG_STYLE )
 
-		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+		#self.SetSizeHints( wx.DefaultSize, wx.DefaultSize ) This doesn't work with a system with python2 installed by default
+		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
+
+		
 
 		bvs_main = wx.BoxSizer( wx.VERTICAL )
 
